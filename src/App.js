@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
-  <>
-    <h1>¡Hola Mundo!</h1>
-    <p>Este es mi e-commerce</p>
-  </>
+    <NavBar/>  
   );
 }
 
