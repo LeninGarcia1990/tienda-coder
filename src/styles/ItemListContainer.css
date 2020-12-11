@@ -1,0 +1,17 @@
+.container ul li {
+  width: 50%;
+  list-style: none;
+}
+
+.container ul {
+  display: flex;
+}
+.container h2 {
+  text-align: center;
+}
+
+.list_product {
+  padding-top: 5%;
+  background-color: white;
+  border: grey;
+}

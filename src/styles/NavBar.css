@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 100%;
   background: #ff6600;
-  padding: 20px;
+  padding: 15px;
   position: absolute;
   z-index: 99;
   left: 0;
@@ -19,8 +19,7 @@
   margin-right: 2%;
   padding: 5px;
   text-align: center;
-  color: black;
-  background-color: #fff;
+  color: white;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -47,20 +46,18 @@
 
 .menu li {
   float: left;
-  background: #e9e9e9;
   padding: 0;
   margin: 0;
 }
 
 .menu li a {
   text-decoration: none;
-  padding: 1.5em 3em;
+  padding: 1.1em 1em;
   display: block;
-  color: black;
-  font-weight: 700;
+  color: white;
+  font-weight: bold;
 }
 
 .menu li a:hover {
-  background: #0cbe41;
-  color: aliceblue;
+  border-bottom: 2px solid aliceblue;
 }

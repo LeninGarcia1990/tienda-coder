@@ -1,0 +1,9 @@
+.Card {
+  width: 80%;
+}
+.Card img {
+  width: 100%;
+}
+.Card:hover {
+  color: #ff6600;
+}
