@@ -1,4 +1,4 @@
-import '../../styles/Card.css';
+import '../../styles/Item.css';
 import ItenCount from '../ItemCount/ItemCount';
 export default function Card (props)  {
 
