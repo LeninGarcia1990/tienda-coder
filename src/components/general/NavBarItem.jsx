@@ -1,9 +1,9 @@
-
+import { Link } from  'react-router-dom';
 const NavBarItem = ({name,url}) => (
-    <>
+    
         <li>
-        <a href={url}>{name}</a> 
+        <Link to={url}>{name}</Link>
         </li>
-    </>
+    
 )
 export default NavBarItem;

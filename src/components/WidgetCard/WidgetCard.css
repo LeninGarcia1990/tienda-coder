@@ -1,0 +1,17 @@
+.navWidget {
+    position: relative;
+    float: right;
+    margin-right: 4%;
+    text-align: center;
+    padding: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .navWidget:hover {
+    cursor: pointer;
+    color: #ff6600;
+  }
+  
