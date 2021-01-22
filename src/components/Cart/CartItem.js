@@ -23,6 +23,9 @@ const CartItem = ({ image, title, quantity, price }) => {
             <td>
                 <button className="delete is-medium ml-4"></button>
             </td>
+            <td>
+
+            </td>
         </>
     )
 }

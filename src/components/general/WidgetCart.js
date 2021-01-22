@@ -1,14 +1,16 @@
 import { useContext } from 'react'
 import { Store } from '../../store'
+import { Link } from 'react-router-dom'
+
 
 const WidgetCart = ({ show, action }) => {
 
     const data = useContext(Store);
 
-    const removeItemFromCart = (id, quantity) => {
-        console.log(id);
 
+    const removeItemFromCart = (id, quantity) => {
         const index = data.itemsCart.items.findIndex(find => find.product.id === id);
+        console.log(data.itemsCart.items)
         const newItemsCart = data.itemsCart.items;
         newItemsCart.splice(index, 1);
 
@@ -26,6 +28,7 @@ const WidgetCart = ({ show, action }) => {
             totalCart: 0
         });
     }
+
 
     const cartList = data.itemsCart.items && data.itemsCart.items.map(item =>
         <div className="media is-flex is-align-items-center">
@@ -46,12 +49,16 @@ const WidgetCart = ({ show, action }) => {
     return (
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
             <div className="mb-6 is-flex is-align-items-center is-justify-content-space-between">
-                <p className="title mb-0">Mis Articulos ({data.itemsCart.totalCart})</p>
-                <button onClick={action} className="delete"></button>
+                <p className="title mb-0">Your Cart ({data.itemsCart.totalCart})</p>
+                <button onClick={action} className="delete is-large"></button>
             </div>
             { cartList}
             { data.itemsCart.totalCart > 0 &&
-                <button className="button is-danger is-rounded mt-6" onClick={removeAllItemsFromCart}>Limpiar Carrito</button>
+                <div className="is-flex is-align-items-center is-justify-content-space-between mt-6">
+                    <button className="button is-danger is-rounded" onClick={removeAllItemsFromCart}>Remove all products</button>
+                    <Link to="/cart" className="button is-info is-pulled-right"><span>Comprar</span><span className="icon"><i className="fas fa-arrow-right"></i></span></Link>
+                </div>
+
             }
         </div>
     )

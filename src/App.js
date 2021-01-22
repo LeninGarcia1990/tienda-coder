@@ -9,6 +9,7 @@ import Category from './components/Category/index'
 import Cart from './components/Cart/index'
 import Newsletter from './components/general/Newsletter'
 import StoreProvider from './store'
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/cart">
             <Cart />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
           </Route>
         </Switch>
         <Newsletter />
