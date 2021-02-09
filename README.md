@@ -1,4 +1,4 @@
-# Ecomerce-lagm 🎧
+# Ecomerce-lagm
 This is the React.js final project from [Coder House](https://coderhouse.com).\
 🛠
 
@@ -11,7 +11,7 @@ This is the React.js final project from [Coder House](https://coderhouse.com).\
 ## Gif
 [Ecomerce-lagm](https://ibb.co/bm5mhJY)
 
-## Getting Started 🚀
+## Getting Started
 
 In the project directory, you can run:
 ### `npm install`
