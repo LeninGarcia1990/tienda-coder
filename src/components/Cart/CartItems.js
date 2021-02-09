@@ -14,16 +14,20 @@ const CartItems = ({ items }) => {
                     </tr>
                 </thead>
                 <tbody>
+
+
+
                     {items.length && items.map((product) => {
                         return (
                             <tr key={product.id}>
+
                                 <CartItem
                                     id={product.id}
-                                    image={product.image}
-                                    title={product.title}
-                                    brand={product.brand}
-                                    price={product.price}
-                                    quantity={product.quantity}
+                                    image={product.data.image}
+                                    title={product.data.title}
+                                    brand={product.data.brand}
+                                    price={product.data.price}
+                                    quantity={product.data.quantity}
                                 />
                             </tr>
                         );

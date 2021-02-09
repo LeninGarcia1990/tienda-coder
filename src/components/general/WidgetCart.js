@@ -10,7 +10,6 @@ const WidgetCart = ({ show, action }) => {
 
     const removeItemFromCart = (id, quantity) => {
         const index = data.itemsCart.items.findIndex(find => find.product.id === id);
-        console.log(data.itemsCart.items)
         const newItemsCart = data.itemsCart.items;
         newItemsCart.splice(index, 1);
 
@@ -34,14 +33,14 @@ const WidgetCart = ({ show, action }) => {
         <div className="media is-flex is-align-items-center">
             <figure className="media-left">
                 <p className="image is-64x64">
-                    <img src={item.product.image} alt={item.product.title} />
+                    <img src={item.product[0].data.image} alt={item.product[0].data.title} />
                 </p>
             </figure>
             <div className="media-content">
-                <p className="title is-6">{item.product.title} <small>({item.quantity})</small></p>
+                <p className="title is-6">{item.product[0].data.title} <small>({item.quantity})</small></p>
             </div>
             <div className="media-right">
-                <button onClick={() => removeItemFromCart(item.product.id, item.quantity)} className="delete has-background-danger"></button>
+                <button onClick={() => removeItemFromCart(item.product[0].id, item.quantity)} className="delete has-background-danger"></button>
             </div>
         </div>
     )
@@ -55,7 +54,7 @@ const WidgetCart = ({ show, action }) => {
             { cartList}
             { data.itemsCart.totalCart > 0 &&
                 <div className="is-flex is-align-items-center is-justify-content-space-between mt-6">
-                    <button className="button is-danger is-rounded" onClick={removeAllItemsFromCart}>Remove all products</button>
+                    <button className="button is-danger is-rounded" onClick={removeAllItemsFromCart}>Limpiar</button>
                     <Link to="/cart" className="button is-info is-pulled-right"><span>Comprar</span><span className="icon"><i className="fas fa-arrow-right"></i></span></Link>
                 </div>
 

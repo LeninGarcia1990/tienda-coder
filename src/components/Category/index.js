@@ -13,7 +13,7 @@ const Category = () => {
 
     const db = getFirestore();
 
-    const getProducts = () => {
+    useEffect(() => {
         db.collection('productos').where("category", "==", category_name).get()
             .then(docs => {
                 let arr = [];
@@ -23,12 +23,8 @@ const Category = () => {
                 setFetchProducts(arr)
             })
             .catch(e => console.log(e));
-    }
 
-    useEffect(() => {
-        getProducts();
-
-    }, []);
+    }, [category_name]);
 
     return (
         <section className="section is-medium">

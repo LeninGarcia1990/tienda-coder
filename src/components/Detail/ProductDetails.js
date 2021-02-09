@@ -15,6 +15,7 @@ const ProductDetail = ({ product }) => {
     const onAddItem = (id) => {
         data.itemsCart.items.filter(item => item.product.id === id).length === 0 ?
 
+
             data.setItemsCart({
                 ...data.itemsCart,
                 items: [...data.itemsCart.items, { product, quantity: data.itemsCart.count }],
