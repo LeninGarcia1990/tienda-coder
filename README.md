@@ -9,7 +9,7 @@ This is the React.js final project from [Coder House](https://coderhouse.com).\
 * Google Firebase
 
 ## Gif
-![Ecomerce-lagm](https://ibb.co/bm5mhJY)
+[Ecomerce-lagm](https://ibb.co/bm5mhJY)
 
 ## Getting Started 🚀
 
